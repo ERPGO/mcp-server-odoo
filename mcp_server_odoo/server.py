@@ -68,7 +68,7 @@ class OdooMCPServer:
             name="odoo-mcp-server",
             instructions="MCP server for accessing and managing Odoo ERP data through the Model Context Protocol",
             lifespan=self._odoo_lifespan,
-            settings=security_settings,
+            transport_security=security_settings,
         )
 
         @self.app.custom_route("/health", methods=["GET"])
